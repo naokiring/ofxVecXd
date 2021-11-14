@@ -3,6 +3,7 @@
 class ofVec3d;
 class ofVec4d;
 #include "ofConstants.h"
+#include "ofVec2f.h"
 
 /// \brief
 /// ofVec2d is a class for storing a two dimensional vector. 
@@ -64,6 +65,11 @@ class ofVec4d;
 /// \sa ofVec3d for 3D vectors
 /// \sa ofVec4d for 4D vectors
 class ofVec2d {
+public:
+	operator ofVec2f() const {
+		return ofVec2f(x, y);
+	}
+
 public:
 	/// \cond INTERNAL
 	static const int DIM = 2;

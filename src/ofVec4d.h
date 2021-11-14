@@ -3,8 +3,14 @@
 class ofVec2d;
 class ofVec3d;
 #include "ofConstants.h"
+#include "ofVec4f.h"
 
 class ofVec4d {
+public:
+	operator ofVec4f() const {
+		return ofVec4f(x, y, z, w);
+	}
+
 public:
     /// \cond INTERNAL
     static const int DIM = 4;

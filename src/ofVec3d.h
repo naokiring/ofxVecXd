@@ -3,6 +3,7 @@
 #include "ofVec2d.h"
 #include "ofVec4d.h"
 #include "ofConstants.h"
+#include "ofVec3f.h"
 
 #include <cmath>
 #include <iostream>
@@ -76,6 +77,11 @@
 /// \sa ofVec2d for 2D vectors
 /// \sa ofVec4d for 4D vectors
 class ofVec3d {
+public:
+	operator ofVec3f() const {
+		return ofVec3f(x, y, z);
+	}
+
 public:
    	/// \cond INTERNAL
 	static const int DIM = 3;
